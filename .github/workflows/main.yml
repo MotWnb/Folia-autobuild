@@ -39,7 +39,7 @@ jobs:
       - name: Move artifact
         run: |
           mkdir -p artifacts
-          cp folia/paper-server/build/libs/*.jar artifacts/
+          cp folia/build/libs/*.jar artifacts/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
