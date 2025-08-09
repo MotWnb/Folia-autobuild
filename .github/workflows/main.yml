@@ -1,7 +1,9 @@
 name: Build & Release Folia
 
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build_and_release:
@@ -14,7 +16,7 @@ jobs:
 
       - name: Clone PaperMC/Folia repository
         run: |
-          git clone --depth 1 --branch master https://github.com/PaperMC/Folia.git folia
+          git clone --depth 1 --branch main https://github.com/PaperMC/Folia.git folia
           cd folia
           git submodule update --init --recursive
 
