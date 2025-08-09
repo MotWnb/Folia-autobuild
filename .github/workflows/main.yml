@@ -14,7 +14,7 @@ jobs:
 
       - name: Clone PaperMC/Folia repository
         run: |
-          git clone --depth 1 --branch main https://github.com/PaperMC/Folia.git folia
+          git clone --depth 1 https://github.com/PaperMC/Folia.git folia
           cd folia
           git submodule update --init --recursive
 
